@@ -132,7 +132,7 @@ app.post("/protect", upload.single("pdf"), (req, res) => {
 
         ];
 
-const qpdfPath = "C:\\Program Files (x86)\\qpdf 12.3.2\\bin\\qpdf.exe";
+const qpdfPath = "qpdf";
 
 execFile(
     qpdfPath,
