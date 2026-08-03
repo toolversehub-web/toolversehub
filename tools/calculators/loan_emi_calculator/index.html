@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Free EMI Loan Calculator. Calculate monthly EMI, total payment and total interest instantly.">
+
+<meta name="keywords"
+content="EMI Calculator, Loan Calculator, Mortgage Calculator, EMI">
+
+<meta name="author"
+content="Toolversehub">
+
+<title>
+
+EMI Loan Calculator - Toolversehub
+
+</title>
+
+<link rel="icon" type="image/png" href="../../../favicon.png">
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+HEADER
+========================================== -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="../../../index.html">
+
+            ToolVerseHub
+
+        </a>
+
+    </div>
+
+    <nav>
+
+        <a href="../../../index.html">
+
+            Home
+
+        </a>
+
+        <a href="../index.html">
+
+            Calculators
+
+        </a>
+
+        <a href="../../pdf_tools/index.html">
+
+            PDF Tools
+
+        </a>
+
+        <a href="../../../about.html">About</a>
+<a href="../../../contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+<!-- ==========================================
+HERO
+========================================== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+
+EMI Loan Calculator
+
+</h1>
+
+<p>
+
+Calculate your monthly EMI, total payment, total interest, and loan payoff instantly using the standard banking EMI formula.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+CALCULATOR
+========================================== -->
+
+<section class="calculator">
+
+<div class="calculator-card">
+
+<h2>
+
+Calculate Your Loan EMI
+
+</h2>
+
+<form id="emiForm">
+
+<!-- Loan Amount -->
+
+<div class="form-group">
+
+<label for="loanAmount">
+
+Loan Amount
+
+</label>
+
+<input
+
+type="number"
+
+id="loanAmount"
+
+placeholder="e.g. 500000"
+
+min="1"
+
+required>
+
+</div>
+
+<!-- Currency -->
+
+<div class="form-group">
+
+<label for="currency">
+
+Currency
+
+</label>
+
+<select id="currency">
+
+<option value="$">US Dollar ($)</option>
+
+<option value="€">Euro (€)</option>
+
+<option value="£">British Pound (£)</option>
+
+<option value="₨" selected>Pakistani Rupee (₨)</option>
+
+<option value="₹">Indian Rupee (₹)</option>
+
+<option value="د.إ">UAE Dirham (د.إ)</option>
+
+</select>
+
+</div>
+
+<!-- Interest Rate -->
+
+<div class="form-group">
+
+<label for="interestRate">
+
+Annual Interest Rate (%)
+
+</label>
+
+<input
+
+type="number"
+
+id="interestRate"
+
+placeholder="e.g. 12"
+
+step="0.01"
+
+min="0"
+
+required>
+
+</div>
+
+<!-- Loan Term -->
+
+<div class="form-group">
+
+<label for="loanTerm">
+
+Loan Term
+
+</label>
+
+<div class="term-group">
+
+<input
+
+type="number"
+
+id="loanTerm"
+
+placeholder="e.g. 5"
+
+min="1"
+
+required>
+
+<select id="termUnit">
+
+<option value="years">
+
+Years
+
+</option>
+
+<option value="months">
+
+Months
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+<!-- ==========================================
+EXTRA PAYMENT
+========================================== -->
+
+<div class="form-group">
+
+<label for="extraPayment">
+
+Monthly Extra Payment (Optional)
+
+</label>
+
+<input
+
+type="number"
+
+id="extraPayment"
+
+placeholder="e.g. 5000"
+
+min="0"
+
+value="0">
+
+</div>
+
+<!-- ==========================================
+PROCESSING FEE
+========================================== -->
+
+<div class="form-group">
+
+<label for="processingFee">
+
+Processing Fee (Optional)
+
+</label>
+
+<input
+
+type="number"
+
+id="processingFee"
+
+placeholder="e.g. 10000"
+
+min="0"
+
+value="0">
+
+</div>
+
+<!-- ==========================================
+START DATE
+========================================== -->
+
+<div class="form-group">
+
+<label for="startDate">
+
+Loan Start Date (Optional)
+
+</label>
+
+<input
+
+type="date"
+
+id="startDate">
+
+</div>
+
+<!-- ==========================================
+BUTTONS
+========================================== -->
+
+<div class="button-group">
+
+<button
+
+type="button"
+
+id="calculateBtn">
+
+Calculate EMI
+
+</button>
+
+<button
+
+type="reset"
+
+id="resetBtn">
+
+Reset
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+<!-- ==========================================
+RESULTS
+========================================== -->
+
+<section class="results">
+
+<h2>
+
+Loan Summary
+
+</h2>
+
+<div class="results-grid">
+
+<div class="result-box">
+
+<h3 id="monthlyEMI">
+
+₨ 0
+
+</h3>
+
+<p>
+
+Monthly EMI
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="totalPayment">
+
+₨ 0
+
+</h3>
+
+<p>
+
+Total Payment
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="totalInterest">
+
+₨ 0
+
+</h3>
+
+<p>
+
+Total Interest
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="loanPayoff">
+
+--
+
+</h3>
+
+<p>
+
+Loan Payoff Date
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="extraPaid">
+
+₨ 0
+
+</h3>
+
+<p>
+
+Total Extra Payment
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="processingFeeResult">
+
+₨ 0
+
+</h3>
+
+<p>
+
+Processing Fee
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="effectiveCost">
+
+₨ 0
+
+</h3>
+
+<p>
+
+Effective Loan Cost
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="interestPercentage">
+
+0%
+
+</h3>
+
+<p>
+
+Interest Percentage
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+ABOUT
+========================================== -->
+
+<section class="about">
+
+<h2>
+
+About EMI Calculator
+
+</h2>
+
+<div class="about-card">
+
+<p>
+
+An EMI (Equated Monthly Installment) Calculator helps you estimate the fixed monthly payment required to repay a loan over a selected period at a specified interest rate.
+
+</p>
+
+<p>
+
+This calculator uses the standard banking EMI formula, making it suitable for personal loans, home loans, car loans, education loans, and many other installment-based loans.
+
+</p>
+
+<p>
+
+Simply enter the loan amount, annual interest rate, repayment period, and optional extra payments to view detailed repayment information instantly.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+FORMULA
+========================================== -->
+
+<section class="formula">
+
+<h2>
+
+Formula Used
+
+</h2>
+
+<div class="formula-card">
+
+<h3>
+
+Monthly EMI Formula
+
+</h3>
+
+<p>
+
+EMI = P × R × (1 + R)<sup>N</sup> ÷ ((1 + R)<sup>N</sup> − 1)
+
+</p>
+
+<br>
+
+<p>
+
+<b>P</b> = Loan Amount
+
+</p>
+
+<p>
+
+<b>R</b> = Monthly Interest Rate
+
+</p>
+
+<p>
+
+<b>N</b> = Total Number of Monthly Payments
+
+</p>
+
+</div>
+
+</section>
+<!-- ==========================================
+FAQ
+========================================== -->
+
+<section class="faq">
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+<div class="faq-item">
+
+<h3>
+
+What is an EMI?
+
+</h3>
+
+<p>
+
+EMI (Equated Monthly Installment) is the fixed amount you pay every month to repay your loan. It includes both principal and interest.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+How is EMI calculated?
+
+</h3>
+
+<p>
+
+EMI is calculated using the standard banking formula based on your loan amount, annual interest rate, and repayment period.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Can I make extra monthly payments?
+
+</h3>
+
+<p>
+
+Yes. This calculator allows you to enter an optional monthly extra payment to estimate the total additional amount paid during the loan period.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Does this calculator work for all types of loans?
+
+</h3>
+
+<p>
+
+Yes. It can be used for personal loans, home loans, car loans, education loans, business loans, and most installment-based loans.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+RELATED CALCULATORS
+========================================== -->
+
+<section class="related-tools">
+
+<h2>
+
+Related Calculators
+
+</h2>
+
+<div class="related-grid">
+
+<div class="related-card">
+
+<h3>
+
+BMR Calculator
+
+</h3>
+
+<p>
+
+Calculate your Basal Metabolic Rate and daily calorie requirements.
+
+</p>
+
+<a href="../bmr_calculator/index.html">
+
+Open Calculator
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+BMI Calculator
+
+</h3>
+
+<p>
+
+Check your Body Mass Index and healthy weight category.
+
+</p>
+
+<a href="../bmi_calculator/index.html">
+
+Open Calculator
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+GPA Calculator
+
+</h3>
+
+<p>
+
+Calculate your Grade Point Average using the international 4.0 grading system.
+
+</p>
+
+<a href="../gpa_calculator/index.html">
+
+Open Calculator
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h2>Toolversehub</h2>
+
+            <p>
+
+                Fast, Free & Secure Online Tools.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="../../../index.html">Home</a>
+
+        
+            </a>
+
+            <a href="../../calculators/index.html">
+
+                    Calculators
+
+            <a href="../../pdf_tools/index.html">PDF Tools</a>
+
+            </a>
+
+            <a href="../../../about.html">About</a>
+
+<a href="../../../contact.html">Contact</a>
+
+<a href="../../../privacy_policy.html">Privacy Policy</a>
+
+<a href="../../../terms_&_conditions.html">Terms & Conditions</a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Toolversehub. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

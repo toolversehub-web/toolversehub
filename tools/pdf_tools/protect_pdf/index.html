@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Protect PDF - ToolVerseHub</title>
+
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+
+    <meta
+        name="description"
+        content="Protect your PDF with a password online for free using ToolVerseHub.">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===================================
+                HEADER
+=================================== -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="../../index.html">
+
+            ToolVerseHub
+
+        </a>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li>
+
+                <a href="../../index.html">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../index.html">
+
+                    PDF Tools
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../../calculators/index.html">
+
+                    Calculators
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../../../about.html">About</a>
+
+
+            </li>
+
+            <li>
+
+                <a href="../../../contact.html">Contact</a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ===================================
+                HERO
+=================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>
+
+            Protect PDF
+
+        </h1>
+
+        <p>
+
+            Add a password to your PDF quickly,
+            securely and completely free.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+                MAIN
+=================================== -->
+
+<main class="container">
+
+    <!-- Upload PDF -->
+
+    <section class="card">
+
+        <h2>
+
+            Upload PDF
+
+        </h2>
+
+        <div
+            class="upload-box"
+            id="uploadBox">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+            <h3>
+
+                Drag & Drop PDF Here
+
+            </h3>
+
+            <p>
+
+                or
+
+            </p>
+
+            <button
+                type="button"
+                id="browseBtn">
+
+                Browse PDF
+
+            </button>
+
+            <input
+                type="file"
+                id="pdfInput"
+                accept=".pdf"
+                hidden>
+
+        </div>
+
+    </section>
+
+    <!-- PDF Information -->
+
+    <section class="card">
+
+        <h2>
+
+            PDF Information
+
+        </h2>
+
+        <div class="info-row">
+
+            <span>
+
+                File Name
+
+            </span>
+
+            <strong id="fileName">
+
+                -
+
+            </strong>
+
+        </div>
+
+        <div class="info-row">
+
+            <span>
+
+                File Size
+
+            </span>
+
+            <strong id="fileSize">
+
+                -
+
+            </strong>
+
+        </div>
+
+        <div class="info-row">
+
+            <span>
+
+                Total Pages
+
+            </span>
+
+            <strong id="totalPages">
+
+                -
+
+            </strong>
+
+        </div>
+
+    </section>
+        <!-- ===================================
+                PASSWORD SETTINGS
+    =================================== -->
+
+    <section class="card">
+
+        <h2>
+
+            Password Protection
+
+        </h2>
+
+        <div class="setting-group">
+
+            <label for="passwordInput">
+
+                Enter Password
+
+            </label>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Enter a password"
+                    autocomplete="new-password">
+
+                <button
+                    type="button"
+                    class="toggle-password"
+                    id="togglePassword">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="setting-group">
+
+            <label for="confirmPassword">
+
+                Confirm Password
+
+            </label>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Enter the password again"
+                    autocomplete="new-password">
+
+                <button
+                    type="button"
+                    class="toggle-password"
+                    id="toggleConfirmPassword">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="password-status">
+
+            <span id="strengthText">
+
+                Password strength: -
+
+            </span>
+
+            <span id="matchText">
+
+                Password match: -
+
+            </span>
+
+        </div>
+
+        <p class="help-text">
+
+            Use at least 6 characters for a stronger password.
+
+        </p>
+
+    </section>
+
+    <!-- ===================================
+                ACTION BUTTONS
+    =================================== -->
+
+    <section class="card action-card">
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="protectBtn">
+
+            <i class="fa-solid fa-lock"></i>
+
+            Protect PDF
+
+        </button>
+
+        <button
+            type="button"
+            class="success-btn"
+            id="downloadBtn"
+            disabled>
+
+            <i class="fa-solid fa-download"></i>
+
+            Download Protected PDF
+
+        </button>
+
+        <button
+            type="button"
+            class="danger-btn"
+            id="resetBtn">
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            Reset
+
+        </button>
+
+    </section>
+        <!-- ===================================
+                HOW TO USE
+    =================================== -->
+
+    <section class="card">
+
+        <h2>
+
+            How to Use
+
+        </h2>
+
+        <ol class="how-to-use">
+
+            <li>
+
+                Upload your PDF using Drag & Drop or Browse PDF.
+
+            </li>
+
+            <li>
+
+                Enter a password and confirm it.
+
+            </li>
+
+            <li>
+
+                Check that both passwords match.
+
+            </li>
+
+            <li>
+
+                Click Protect PDF.
+
+            </li>
+
+            <li>
+
+                Download your password-protected PDF.
+
+            </li>
+
+        </ol>
+
+    </section>
+
+    <!-- ===================================
+                RELATED TOOLS
+    =================================== -->
+
+    <section class="card">
+
+        <h2>
+
+            Related PDF Tools
+
+        </h2>
+
+        <div class="related-tools">
+
+            <a
+                href="../remove_pdf_pages/index.html"
+                class="tool-card">
+
+                Remove PDF Pages
+
+            </a>
+
+            <a
+                href="../rotate_pdf/index.html"
+                class="tool-card">
+
+                Rotate PDF
+
+            </a>
+
+            <a
+                href="../pdf_to_jpg/index.html"
+                class="tool-card">
+
+                PDF to JPG
+
+            </a>
+
+            <a
+                href="../image_to_pdf/index.html"
+                class="tool-card">
+
+                Image to PDF
+
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ===================================
+                FOOTER
+=================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-column">
+
+            <h2>
+
+                ToolVerseHub
+
+            </h2>
+
+            <p>
+
+                Free online PDF tools, image tools and calculators.
+                Fast, secure and privacy-friendly.
+
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <ul>
+
+                <li>
+
+                    <a href="../../../index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../calculators/index.html">
+
+                        Calculators
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../pdf_tools/index.html">
+
+                        PDF Tools
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../privacy_policy.html">
+
+                        Privacy Policy
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../terms_&_conditions.html">
+
+                        Terms & Conditions
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 ToolVerseHub. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+<!-- PDF.JS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<script>
+
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+</script>
+
+<!-- PDF-LIB PLUS ENCRYPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib-plus-encrypt@1.0.0/dist/pdf-lib.min.js"></script>
+
+<!-- SCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

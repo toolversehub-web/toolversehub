@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Image to PDF - ToolVerseHub</title>
+
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+
+    <meta name="description"
+          content="Convert JPG, PNG, JPEG and WEBP images into PDF online for free with ToolVerseHub.">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===================================
+                HEADER
+=================================== -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="../../index.html">
+
+            ToolVerseHub
+
+        </a>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li>
+
+                <a href="../../index.html">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../index.html">
+
+                    PDF Tools
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../../calculators/index.html">
+
+                    Calculators
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../../../about.html">About</a>
+
+            </li>
+
+            <li>
+
+               <a href="../../../contact.html">Contact</a>
+
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- ===================================
+                HERO
+=================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>
+
+            Image to PDF
+
+        </h1>
+
+        <p>
+
+            Convert JPG, JPEG, PNG and WEBP images into a high-quality PDF quickly, securely and completely free.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+                MAIN
+=================================== -->
+
+<main class="container">
+
+    <!-- Upload Images -->
+
+    <section class="card">
+
+        <h2>
+
+            Upload Images
+
+        </h2>
+
+        <div class="upload-box"
+             id="uploadBox">
+
+            <i class="fa-solid fa-images"></i>
+
+            <h3>
+
+                Drag & Drop Images Here
+
+            </h3>
+
+            <p>
+
+                or
+
+            </p>
+
+            <button
+                id="browseBtn"
+                type="button">
+
+                Browse Images
+
+            </button>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept=".jpg,.jpeg,.png,.webp"
+                multiple
+                hidden>
+
+        </div>
+
+    </section>
+
+    <!-- Image Information -->
+
+    <section class="card">
+
+        <h2>
+
+            Image Information
+
+        </h2>
+
+        <div class="info-row">
+
+            <span>
+
+                Total Images
+
+            </span>
+
+            <strong id="totalImages">
+
+                0
+
+            </strong>
+
+        </div>
+
+        <div class="info-row">
+
+            <span>
+
+                Total Size
+
+            </span>
+
+            <strong id="totalSize">
+
+                0 MB
+
+            </strong>
+
+        </div>
+
+    </section>
+
+    <!-- Image Preview -->
+
+    <section class="card">
+
+        <h2>
+
+            Image Preview
+
+        </h2>
+
+        <div
+            id="previewContainer"
+            class="preview-container">
+
+        </div>
+
+    </section>
+        <!-- ===================================
+                PDF SETTINGS
+    =================================== -->
+
+    <section class="card">
+
+        <h2>
+
+            PDF Settings
+
+        </h2>
+
+        <div class="setting-group">
+
+            <label for="pageSize">
+
+                Page Size
+
+            </label>
+
+            <select id="pageSize">
+
+                <option value="A4">
+
+                    A4
+
+                </option>
+
+                <option value="LETTER">
+
+                    Letter
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="setting-group">
+
+            <label>
+
+                Orientation
+
+            </label>
+
+            <div class="radio-group">
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="orientation"
+                        value="portrait"
+                        checked>
+
+                    Portrait
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="orientation"
+                        value="landscape">
+
+                    Landscape
+
+                </label>
+
+            </div>
+
+        </div>
+
+        <div class="setting-group">
+
+            <label for="margin">
+
+                Margin
+
+            </label>
+
+            <select id="margin">
+
+                <option value="0">
+
+                    None
+
+                </option>
+
+                <option value="20">
+
+                    Small
+
+                </option>
+
+                <option value="40" selected>
+
+                    Medium
+
+                </option>
+
+                <option value="60">
+
+                    Large
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="setting-group">
+
+            <label>
+
+                Fit Mode
+
+            </label>
+
+            <div class="radio-group">
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="fitMode"
+                        value="fit"
+                        checked>
+
+                    Fit Image
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="fitMode"
+                        value="fill">
+
+                    Fill Page
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================
+                ACTION BUTTONS
+    =================================== -->
+
+    <section class="card action-card">
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="convertBtn">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+            Convert to PDF
+
+        </button>
+
+        <button
+            type="button"
+            class="success-btn"
+            id="downloadBtn"
+            disabled>
+
+            <i class="fa-solid fa-download"></i>
+
+            Download PDF
+
+        </button>
+
+        <button
+            type="button"
+            class="danger-btn"
+            id="clearBtn">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Clear All
+
+        </button>
+
+    </section>
+        <!-- ===================================
+                HOW TO USE
+    =================================== -->
+
+    <section class="card">
+
+        <h2>
+
+            How to Use
+
+        </h2>
+
+        <ol class="how-to-use">
+
+            <li>
+
+                Upload one or more images using Drag & Drop or Browse Images.
+
+            </li>
+
+            <li>
+
+                Check your uploaded images in the preview section.
+
+            </li>
+
+            <li>
+
+                Select your preferred PDF settings.
+
+            </li>
+
+            <li>
+
+                Click Convert to PDF.
+
+            </li>
+
+            <li>
+
+                Download your generated PDF.
+
+            </li>
+
+        </ol>
+
+    </section>
+
+    <!-- ===================================
+                RELATED TOOLS
+    =================================== -->
+
+    <section class="card">
+
+        <h2>
+
+            Related PDF Tools
+
+        </h2>
+
+        <div class="related-tools">
+
+            <a href="../merge_pdf/index.html" class="tool-card">
+
+                Merge PDF
+
+            </a>
+
+            <a href="../split_pdf/index.html" class="tool-card">
+
+                Split PDF
+
+            </a>
+
+            <a href="../rotate_pdf/index.html" class="tool-card">
+
+                Rotate PDF
+
+             </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ===================================
+                FOOTER
+=================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-column">
+
+            <h2>
+
+                ToolVerseHub
+
+            </h2>
+
+            <p>
+
+                Free online PDF tools, image tools and calculators.
+                Fast, secure and easy to use.
+
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <ul>
+
+                <li>
+
+                    <a href="../../../index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../calculators/index.html">
+
+    Calculators
+
+</a>
+
+                </li>
+
+                <li>
+
+                    <a href="../index.html">
+
+                        PDF Tools
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../privacy_policy.html">
+
+                        Privacy Policy
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../terms_&_conditions.html">
+
+                        Terms & Conditions
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 ToolVerseHub. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+<!-- PDF Library -->
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

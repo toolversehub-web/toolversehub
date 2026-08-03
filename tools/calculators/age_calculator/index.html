@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Free Online Age Calculator by Toolversehub. Calculate your exact age, next birthday, zodiac sign and more.">
+
+    <meta name="keywords"
+          content="Age Calculator, Birthday Calculator, Date Calculator, Toolversehub">
+
+    <meta name="author"
+          content="Toolversehub">
+
+    <title>Age Calculator | Toolversehub</title>
+
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="../../../index.html">
+
+            Toolversehub
+
+        </a>
+
+    </div>
+
+    <nav>
+
+        <a href="../../../index.html">Home</a>
+
+        <a href="../../index.html">Explore Tools</a>
+
+        <a href="../index.html">Calculators</a>
+
+        <a href="../../pdf_tools/index.html">PDF Tools</a>
+
+        <a href="../../../about.html">About</a>
+
+        <a href="../../../contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+
+            Age Calculator
+
+        </h1>
+
+        <p>
+
+            Calculate your exact age online in years, months and days. Find your next birthday, zodiac sign, leap year status and birthday countdown instantly using ToolVerseHub's free Age Calculator.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= CALCULATOR ================= -->
+
+<section class="calculator">
+
+<div class="calculator-card">
+
+<h2>
+
+Enter Your Date of Birth
+
+</h2>
+
+<div class="form-group">
+
+<label for="dob">
+
+Date of Birth
+
+</label>
+
+<input
+type="date"
+id="dob">
+
+</div>
+
+<div class="button-group">
+
+<button id="calculateBtn">
+
+Calculate Age
+
+</button>
+
+<button id="resetBtn">
+
+Reset
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RESULT ================= -->
+
+<section class="results">
+
+<div class="results-card">
+
+<h2>
+
+Your Age
+
+</h2>
+
+<div class="results-grid">
+
+<div class="result-box">
+
+<h3 id="years">
+
+0
+
+</h3>
+
+<p>
+
+Years
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="months">
+
+0
+
+</h3>
+
+<p>
+
+Months
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="days">
+
+0
+
+</h3>
+
+<p>
+
+Days
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="totalMonths">
+
+0
+
+</h3>
+
+<p>
+
+Total Months
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="totalWeeks">
+
+0
+
+</h3>
+
+<p>
+
+Total Weeks
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="totalDays">
+
+0
+
+</h3>
+
+<p>
+
+Total Days
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BIRTH INFORMATION ================= -->
+
+<section class="birth-info">
+
+<div class="info-card">
+
+<h2>
+
+Birth Information
+
+</h2>
+
+<div class="info-grid">
+
+<div class="info-box">
+
+<h3 id="todayDate">
+
+--
+
+</h3>
+
+<p>
+
+Today's Date
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3 id="birthDay">
+
+--
+
+</h3>
+
+<p>
+
+Day of Birth
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3 id="zodiac">
+
+--
+
+</h3>
+
+<p>
+
+Western Zodiac
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3 id="leapYear">
+
+--
+
+</h3>
+
+<p>
+
+Leap Year Birth
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= NEXT BIRTHDAY ================= -->
+
+<section class="birthday">
+
+<div class="birthday-card">
+
+<h2>
+
+Next Birthday
+
+</h2>
+
+<div class="birthday-grid">
+
+<div class="birthday-box">
+
+<h3 id="nextBirthday">
+
+--
+
+</h3>
+
+<p>
+
+Next Birthday Date
+
+</p>
+
+</div>
+
+<div class="birthday-box">
+
+<h3 id="countdown">
+
+--
+
+</h3>
+
+<p>
+
+Birthday Countdown
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <div class="about-card">
+
+        <h2>About Age Calculator</h2>
+
+        <p>
+
+            Toolversehub Age Calculator helps you calculate your exact age
+            from your date of birth using today's date automatically.
+            It provides accurate results in years, months and days while
+            also showing your birth day, zodiac sign, leap year status,
+            next birthday and birthday countdown.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= FORMULA ================= -->
+
+<section class="formula">
+
+    <div class="formula-card">
+
+        <h2>Age Calculation Formula</h2>
+
+        <p>
+
+            Age = Current Date − Date of Birth
+
+        </p>
+
+        <p>
+
+            The calculator automatically considers leap years,
+            different month lengths and the current date to
+            provide accurate results.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+
+        <h3>How does this calculator work?</h3>
+
+        <p>
+
+            It compares your date of birth with today's date and
+            calculates your exact age.
+
+        </p>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>Does it support leap years?</h3>
+
+        <p>
+
+            Yes. Leap years are detected automatically to ensure
+            accurate calculations.
+
+        </p>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>Can I calculate my next birthday?</h3>
+
+        <p>
+
+            Yes. The calculator automatically displays your next
+            birthday along with the remaining countdown.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= RELATED CALCULATORS ================= -->
+
+<section class="related-tools">
+
+    <h2>Related Calculators</h2>
+
+    <div class="related-grid">
+
+        <div class="related-card">
+
+            <h3>BMI Calculator</h3>
+
+            <p>
+
+                Check your Body Mass Index instantly.
+
+            </p>
+
+            <a href="../bmi_calculator/index.html">
+
+                Open Tool
+
+            </a>
+
+        </div>
+
+        <div class="related-card">
+
+            <h3>BMR Calculator</h3>
+
+            <p>
+
+                Calculate your daily calorie needs.
+
+            </p>
+
+            <a href="../bmr_calculator/index.html">
+
+                Open Tool
+
+            </a>
+
+        </div>
+
+        <div class="related-card">
+
+            <h3>Date Calculator</h3>
+
+            <p>
+
+                Calculate the difference between two dates.
+
+            </p>
+
+            <a href="../date_calculator/index.html">
+
+                Open Tool
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h2>Toolversehub</h2>
+
+            <p>
+
+                Fast, Free & Secure Online Tools.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="../../../index.html">Home</a>
+
+        
+            </a>
+
+            <a href="../index.html">Calculators</a>
+
+<a href="../../pdf_tools/index.html">PDF Tools</a>
+
+            <a href="../../../about.html">About</a>
+
+<a href="../../../contact.html">Contact</a>
+
+<a href="../../../privacy_policy.html">Privacy Policy</a>
+
+<a href="../../../terms_&_conditions.html">Terms & Conditions</a>
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Toolversehub. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

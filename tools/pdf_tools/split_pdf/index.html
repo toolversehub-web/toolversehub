@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Split PDF pages instantly with Toolversehub. Extract specific pages from any PDF quickly and securely.">
+
+<title>Split PDF | Toolversehub</title>
+
+<link rel="icon" type="image/png" href="../../../favicon.png">
+
+<link rel="stylesheet"
+href="style.css">
+
+<!-- PDF-LIB -->
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ==========================
+     HEADER
+========================== -->
+
+<header>
+
+<div class="container">
+
+<a href="../../../index.html"
+class="logo">
+
+Toolversehub
+
+</a>
+
+<nav>
+
+<a href="../../../index.html">
+
+Home
+
+<a href="../index.html">
+
+                    PDF Tools
+
+                </a>
+
+<a href="../../calculators/index.html">
+
+                    Calculators
+
+                </a>
+
+<a href="../../../about.html">About</a>
+<a href="../../../contact.html">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- ==========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+<h1>
+
+✂️ Split PDF
+
+</h1>
+
+<p>
+
+Split PDF files by selecting page ranges and download only the pages you need in seconds.
+
+</p>
+
+</section>
+<!-- ==========================
+     UPLOAD SECTION
+========================== -->
+
+<section class="upload-section">
+
+<div class="upload-card">
+
+<h2>
+
+Upload PDF File
+
+</h2>
+
+<div
+class="drop-area"
+id="dropArea">
+
+<div class="upload-icon">
+
+📄
+
+</div>
+
+<h3>
+
+Drag & Drop PDF Here
+
+</h3>
+
+<p>
+
+or
+
+</p>
+
+<label
+for="pdfInput"
+class="browse-btn">
+
+Browse PDF
+
+</label>
+
+<input
+type="file"
+id="pdfInput"
+accept=".pdf,application/pdf"
+hidden>
+
+<span class="supported-text">
+
+Supports PDF files only
+
+</span>
+
+</div>
+
+<div
+class="pdf-info"
+id="pdfInfo">
+
+<p>
+
+Selected File:
+
+<strong id="fileName">
+
+None
+
+</strong>
+
+</p>
+
+<p>
+
+Total Pages:
+
+<strong id="pageCount">
+
+0
+
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+     SPLIT OPTIONS
+========================== -->
+
+<section class="split-section">
+
+<div class="split-card">
+
+<h2>
+
+Split Options
+
+</h2>
+
+<div class="input-group">
+
+<div class="input-box">
+
+<label for="startPage">
+
+Start Page
+
+</label>
+
+<input
+type="number"
+id="startPage"
+min="1"
+placeholder="1">
+
+</div>
+
+<div class="input-box">
+
+<label for="endPage">
+
+End Page
+
+</label>
+
+<input
+type="number"
+id="endPage"
+min="1"
+placeholder="1">
+
+</div>
+
+</div>
+
+<p class="range-note">
+
+Choose the page range you want to extract from the uploaded PDF.
+
+</p>
+
+<div class="button-group">
+
+<button
+id="splitBtn">
+
+✂️ Split PDF
+
+</button>
+
+<button
+id="resetBtn">
+
+🔄 Reset
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+     RELATED PDF TOOLS
+========================== -->
+
+<section class="related-tools">
+
+<h2>
+
+Related PDF Tools
+
+</h2>
+
+<div class="related-grid">
+
+<div class="related-card">
+
+<h3>
+
+📑 Merge PDF
+
+</h3>
+
+<p>
+
+Combine multiple PDF files into one organized document instantly.
+
+</p>
+
+<a href="../merge_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+🖼️ Image to PDF
+
+</h3>
+
+<p>
+
+Convert JPG, PNG, WEBP and other images into a single PDF.
+
+</p>
+
+<a href="../image_to_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+🗜️ Compress PDF
+
+</h3>
+
+<p>
+
+Reduce PDF file size while maintaining excellent document quality.
+
+</p>
+
+<a href="../compress_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h2>Toolversehub</h2>
+
+            <p>
+
+                Fast, Free & Secure Online Tools.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="../../../index.html">Home</a>
+
+        
+            </a>
+
+            <a href="../../calculators/index.html">
+
+                    Calculators
+
+            <a href="../../pdf_tools/index.html">PDF Tools</a>
+
+            </a>
+
+            <a href="../../../about.html">About</a>
+
+<a href="../../../contact.html">Contact</a>
+
+<a href="../../../privacy_policy.html">Privacy Policy</a>
+
+<a href="../../../terms_&_conditions.html">Terms & Conditions</a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Toolversehub. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

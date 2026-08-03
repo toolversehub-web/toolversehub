@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Add professional text watermarks to PDF files online for free with ToolVerseHub.">
+
+<title>Watermark PDF | ToolVerseHub</title>
+
+<link rel="icon" type="image/png" href="../../../favicon.png">
+
+<link rel="stylesheet"
+href="style.css">
+
+<!-- PDF-LIB -->
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ==========================
+     HEADER
+========================== -->
+
+<header>
+
+<div class="container">
+
+<a href="../../../index.html"
+class="logo">
+
+Toolversehub
+
+</a>
+
+<nav>
+
+<a href="../../../index.html">
+
+Home
+
+<a href="../index.html">
+
+                    PDF Tools
+
+                </a>
+
+<a href="../../calculators/index.html">
+
+                    Calculators
+
+                </a>
+
+<a href="../../../about.html">About</a>
+<a href="../../../contact.html">Contact</a>
+
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ==========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+<h1>
+
+💧 Watermark PDF
+
+</h1>
+
+<p>
+
+Add beautiful text or logo watermarks to your PDF files instantly.
+
+</p>
+
+</section>
+<!-- ==========================
+     UPLOAD SECTION
+========================== -->
+
+<section class="upload-section">
+
+<div class="upload-card">
+
+<h2>
+
+Upload PDF
+
+</h2>
+
+<div
+class="drop-area"
+id="dropArea">
+
+<div class="upload-icon">
+
+💧
+
+</div>
+
+<h3>
+
+Drag & Drop PDF Here
+
+</h3>
+
+<p>
+
+or
+
+</p>
+
+<label
+for="pdfInput"
+class="browse-btn">
+
+Browse PDF
+
+</label>
+
+<input
+type="file"
+id="pdfInput"
+accept=".pdf,application/pdf"
+hidden>
+
+<span class="supported-text">
+
+Supports PDF files only
+
+</span>
+
+</div>
+
+<div
+class="pdf-info"
+id="pdfInfo">
+
+<p>
+
+Selected File:
+
+<strong id="fileName">
+
+None
+
+</strong>
+
+</p>
+
+<p>
+
+Total Pages:
+
+<strong id="pageCount">
+
+0
+
+</strong>
+
+</p>
+
+<p>
+
+File Size:
+
+<strong id="fileSize">
+
+0 MB
+
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     WATERMARK TEXT
+========================== -->
+
+<section class="watermark-section">
+
+<div class="watermark-card">
+
+<h2>
+
+Watermark Text
+
+</h2>
+
+<input
+type="text"
+id="watermarkText"
+placeholder="Enter watermark text...">
+
+<p class="watermark-note">
+
+Example: CONFIDENTIAL, DRAFT, SAMPLE or ToolVerseHub
+
+</p>
+
+</div>
+
+</section>
+<!-- ==========================
+     WATERMARK SETTINGS
+========================== -->
+
+<section class="settings-section">
+
+<div class="settings-card">
+
+<h2>
+
+Watermark Settings
+
+</h2>
+
+<div class="setting-group">
+
+<label for="fontSize">
+
+Font Size
+
+</label>
+
+<input
+type="range"
+id="fontSize"
+min="12"
+max="72"
+value="36">
+
+<span id="fontSizeValue">
+
+36 px
+
+</span>
+
+</div>
+
+<div class="setting-group">
+
+<label for="textColor">
+
+Text Color
+
+</label>
+
+<input
+type="color"
+id="textColor"
+value="#ff0000">
+
+</div>
+
+<div class="setting-group">
+
+<label for="opacity">
+
+Opacity
+
+</label>
+
+<input
+type="range"
+id="opacity"
+min="10"
+max="100"
+value="40">
+
+<span id="opacityValue">
+
+40%
+
+</span>
+
+</div>
+
+<div class="setting-group">
+
+<label for="rotation">
+
+Rotation
+
+</label>
+
+<select id="rotation">
+
+<option value="0">
+
+0°
+
+</option>
+
+<option value="45" selected>
+
+45°
+
+</option>
+
+<option value="-45">
+
+-45°
+
+</option>
+
+<option value="90">
+
+90°
+
+</option>
+
+</select>
+
+</div>
+
+<div class="setting-group">
+
+<label for="position">
+
+Watermark Position
+
+</label>
+
+<select id="position">
+
+<option value="center" selected>
+
+Center
+
+</option>
+
+<option value="topLeft">
+
+Top Left
+
+</option>
+
+<option value="topRight">
+
+Top Right
+
+</option>
+
+<option value="bottomLeft">
+
+Bottom Left
+
+</option>
+
+<option value="bottomRight">
+
+Bottom Right
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+     ACTION SECTION
+========================== -->
+
+<section class="action-section">
+
+<div class="action-card">
+
+<button id="watermarkBtn">
+
+💧 Add Watermark
+
+</button>
+
+<button id="resetBtn">
+
+🔄 Reset
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     RELATED PDF TOOLS
+========================== -->
+
+<section class="related-tools">
+
+<h2>
+
+Related PDF Tools
+
+</h2>
+
+<div class="related-grid">
+
+<div class="related-card">
+
+<h3>
+
+🔒 Protect PDF
+
+</h3>
+
+<p>
+
+Secure your PDF with a password in just a few clicks.
+
+</p>
+
+<a href="../protect_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+🔄 Rotate PDF
+
+</h3>
+
+<p>
+
+Rotate PDF pages to the correct orientation instantly.
+
+</p>
+
+<a href="../rotate_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+📄 Add Page Numbers
+
+</h3>
+
+<p>
+
+Insert professional page numbers into every PDF page.
+
+</p>
+
+<a href="../add_page_numbers/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h2>Toolversehub</h2>
+
+            <p>
+
+                Fast, Free & Secure Online Tools.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="../../../index.html">Home</a>
+
+        
+            </a>
+
+            <a href="../../calculators/index.html">
+
+                    Calculators
+
+            <a href="../../pdf_tools/index.html">PDF Tools</a>
+
+            </a>
+
+            <a href="../../../about.html">About</a>
+
+<a href="../../../contact.html">Contact</a>
+
+<a href="../../../privacy_policy.html">Privacy Policy</a>
+
+<a href="../../../terms_&_conditions.html">Terms & Conditions</a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Toolversehub. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

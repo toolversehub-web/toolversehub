@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Free GPA Calculator. Calculate your GPA using the international 4.0 grading scale with credit hours.">
+
+<meta name="keywords"
+content="GPA Calculator, College GPA, University GPA, Grade Point Average Calculator">
+
+<meta name="author"
+content="Toolversehub">
+
+<title>
+
+GPA Calculator - Toolversehub
+
+</title>
+
+<link rel="icon" type="image/png" href="../../../favicon.png">
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+HEADER
+========================================== -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="../../../index.html">
+
+            ToolVerseHub
+
+        </a>
+
+    </div>
+
+    <nav>
+
+        <a href="../../../index.html">
+
+            Home
+
+        </a>
+
+        <a href="../index.html">
+
+            Calculators
+
+        </a>
+
+        <a href="../../pdf_tools/index.html">
+
+            PDF Tools
+
+        </a>
+
+        <a href="../../../about.html">About</a>
+<a href="../../../contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+<!-- ==========================================
+HERO
+========================================== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+
+GPA Calculator
+
+</h1>
+
+<p>
+
+Calculate your Grade Point Average (GPA) instantly using the international 4.0 grading scale. Add multiple subjects, assign credit hours, select grades, and get accurate GPA results in seconds.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+CALCULATOR
+========================================== -->
+
+<section class="calculator">
+
+<div class="calculator-card">
+
+<h2>
+
+Calculate Your GPA
+
+</h2>
+
+<form id="gpaForm">
+
+<!-- Student Name -->
+
+<div class="form-group">
+
+<label for="studentName">
+
+Student Name (Optional)
+
+</label>
+
+<input
+
+type="text"
+
+id="studentName"
+
+placeholder="Enter your name">
+
+</div>
+
+<!-- Semester -->
+
+<div class="form-group">
+
+<label for="semester">
+
+Semester (Optional)
+
+</label>
+
+<input
+
+type="text"
+
+id="semester"
+
+placeholder="e.g. Fall 2026">
+
+</div>
+
+<!-- ==========================================
+SUBJECT TABLE
+========================================== -->
+
+<div class="table-wrapper">
+
+<table id="subjectTable">
+
+<thead>
+
+<tr>
+
+<th>
+
+Subject
+
+</th>
+
+<th>
+
+Credit Hours
+
+</th>
+
+<th>
+
+Grade
+
+</th>
+
+<th>
+
+Action
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody id="subjectBody">
+    <!-- ==========================================
+DEFAULT SUBJECTS
+========================================== -->
+
+<tr>
+
+<td>
+
+<input
+type="text"
+placeholder="Subject 1 (Optional)"
+class="subject-name">
+
+</td>
+
+<td>
+
+<input
+type="number"
+class="credit-hours"
+min="1"
+max="6"
+value="3">
+
+</td>
+
+<td>
+
+<select class="grade">
+
+<option value="4.00">A+</option>
+<option value="4.00">A</option>
+<option value="3.67">A-</option>
+<option value="3.33">B+</option>
+<option value="3.00">B</option>
+<option value="2.67">B-</option>
+<option value="2.33">C+</option>
+<option value="2.00">C</option>
+<option value="1.67">C-</option>
+<option value="1.33">D+</option>
+<option value="1.00">D</option>
+<option value="0.00">F</option>
+
+</select>
+
+</td>
+
+<td>
+
+<button
+type="button"
+class="remove-btn">
+
+Remove
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<input
+type="text"
+placeholder="Subject 2 (Optional)"
+class="subject-name">
+
+</td>
+
+<td>
+
+<input
+type="number"
+class="credit-hours"
+min="1"
+max="6"
+value="3">
+
+</td>
+
+<td>
+
+<select class="grade">
+
+<option value="4.00">A+</option>
+<option value="4.00">A</option>
+<option value="3.67">A-</option>
+<option value="3.33">B+</option>
+<option value="3.00">B</option>
+<option value="2.67">B-</option>
+<option value="2.33">C+</option>
+<option value="2.00">C</option>
+<option value="1.67">C-</option>
+<option value="1.33">D+</option>
+<option value="1.00">D</option>
+<option value="0.00">F</option>
+
+</select>
+
+</td>
+
+<td>
+
+<button
+type="button"
+class="remove-btn">
+
+Remove
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<input
+type="text"
+placeholder="Subject 3 (Optional)"
+class="subject-name">
+
+</td>
+
+<td>
+
+<input
+type="number"
+class="credit-hours"
+min="1"
+max="6"
+value="3">
+
+</td>
+
+<td>
+
+<select class="grade">
+
+<option value="4.00">A+</option>
+<option value="4.00">A</option>
+<option value="3.67">A-</option>
+<option value="3.33">B+</option>
+<option value="3.00">B</option>
+<option value="2.67">B-</option>
+<option value="2.33">C+</option>
+<option value="2.00">C</option>
+<option value="1.67">C-</option>
+<option value="1.33">D+</option>
+<option value="1.00">D</option>
+<option value="0.00">F</option>
+
+</select>
+
+</td>
+
+<td>
+
+<button
+type="button"
+class="remove-btn">
+
+Remove
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<input
+type="text"
+placeholder="Subject 4 (Optional)"
+class="subject-name">
+
+</td>
+
+<td>
+
+<input
+type="number"
+class="credit-hours"
+min="1"
+max="6"
+value="3">
+
+</td>
+
+<td>
+
+<select class="grade">
+
+<option value="4.00">A+</option>
+<option value="4.00">A</option>
+<option value="3.67">A-</option>
+<option value="3.33">B+</option>
+<option value="3.00">B</option>
+<option value="2.67">B-</option>
+<option value="2.33">C+</option>
+<option value="2.00">C</option>
+<option value="1.67">C-</option>
+<option value="1.33">D+</option>
+<option value="1.00">D</option>
+<option value="0.00">F</option>
+
+</select>
+
+</td>
+
+<td>
+
+<button
+type="button"
+class="remove-btn">
+
+Remove
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<input
+type="text"
+placeholder="Subject 5 (Optional)"
+class="subject-name">
+
+</td>
+
+<td>
+
+<input
+type="number"
+class="credit-hours"
+min="1"
+max="6"
+value="3">
+
+</td>
+
+<td>
+
+<select class="grade">
+
+<option value="4.00">A+</option>
+<option value="4.00">A</option>
+<option value="3.67">A-</option>
+<option value="3.33">B+</option>
+<option value="3.00">B</option>
+<option value="2.67">B-</option>
+<option value="2.33">C+</option>
+<option value="2.00">C</option>
+<option value="1.67">C-</option>
+<option value="1.33">D+</option>
+<option value="1.00">D</option>
+<option value="0.00">F</option>
+
+</select>
+
+</td>
+
+<td>
+
+<button
+type="button"
+class="remove-btn">
+
+Remove
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="button-group">
+
+<button
+type="button"
+id="addSubject">
+
++ Add Subject
+
+</button>
+
+<button
+type="button"
+id="calculateBtn">
+
+Calculate GPA
+
+</button>
+
+<button
+type="reset"
+id="resetBtn">
+
+Reset
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+<!-- ==========================================
+RESULTS
+========================================== -->
+
+<section class="results">
+
+<h2>
+
+Your GPA Result
+
+</h2>
+
+<div class="results-grid">
+
+<div class="result-box">
+
+<h3 id="gpaResult">
+
+0.00
+
+</h3>
+
+<p>
+
+Overall GPA
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="totalCredits">
+
+0
+
+</h3>
+
+<p>
+
+Total Credit Hours
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="totalGradePoints">
+
+0.00
+
+</h3>
+
+<p>
+
+Total Grade Points
+
+</p>
+
+</div>
+
+<div class="result-box">
+
+<h3 id="academicStanding">
+
+--
+
+</h3>
+
+<p>
+
+Academic Standing
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+ABOUT
+========================================== -->
+
+<section class="about">
+
+<h2>
+
+About GPA Calculator
+
+</h2>
+
+<div class="about-card">
+
+<p>
+
+A Grade Point Average (GPA) is a numerical representation of a student's academic performance. It is calculated by multiplying the grade points earned in each subject by its credit hours, adding those values together, and dividing the result by the total credit hours.
+
+</p>
+
+<p>
+
+This GPA Calculator follows the internationally recognized 4.0 grading scale and is suitable for most colleges and universities around the world.
+
+</p>
+
+<p>
+
+You can add or remove subjects, enter credit hours, choose your letter grades, and instantly calculate your GPA with accurate results.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+FORMULA
+========================================== -->
+
+<section class="formula">
+
+<h2>
+
+Formula Used
+
+</h2>
+
+<div class="formula-card">
+
+<h3>
+
+Grade Point Average (GPA)
+
+</h3>
+
+<p>
+
+GPA = Total Grade Points ÷ Total Credit Hours
+
+</p>
+
+<br>
+
+<h3>
+
+Example
+
+</h3>
+
+<p>
+
+If a subject has 3 credit hours and the student earns an A (4.00), then:
+
+</p>
+
+<p>
+
+3 × 4.00 = 12 Grade Points
+
+</p>
+
+<p>
+
+The GPA is calculated by adding all grade points and dividing them by the total credit hours.
+
+</p>
+
+</div>
+
+</section>
+<!-- ==========================================
+FAQ
+========================================== -->
+
+<section class="faq">
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+<div class="faq-item">
+
+<h3>
+
+What is GPA?
+
+</h3>
+
+<p>
+
+GPA (Grade Point Average) is a numerical value that represents your overall academic performance based on the grades and credit hours of your subjects.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+How is GPA calculated?
+
+</h3>
+
+<p>
+
+Each subject's grade point is multiplied by its credit hours. The sum of all grade points is then divided by the total credit hours.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Which grading scale does this calculator use?
+
+</h3>
+
+<p>
+
+This calculator uses the International 4.0 GPA grading scale including A+, A, A-, B+, B, B-, C+, C, C-, D+, D and F grades.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Can I add more than five subjects?
+
+</h3>
+
+<p>
+
+Yes. Click the <strong>+ Add Subject</strong> button to add as many subjects as you need.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+RELATED CALCULATORS
+========================================== -->
+
+<section class="related-tools">
+
+<h2>
+
+Related Calculators
+
+</h2>
+
+<div class="related-grid">
+
+<div class="related-card">
+
+<h3>
+
+Age Calculator
+
+</h3>
+
+<p>
+
+Calculate your exact age in years, months and days.
+
+</p>
+
+<a href="../age_calculator/index.html">
+
+Open Calculator
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+BMI Calculator
+
+</h3>
+
+<p>
+
+Check your Body Mass Index and weight category.
+
+</p>
+
+<a href="../bmi_calculator/index.html">
+
+Open Calculator
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+BMR Calculator
+
+</h3>
+
+<p>
+
+Calculate your Basal Metabolic Rate and daily calorie needs.
+
+</p>
+
+<a href="../bmr_calculator/index.html">
+
+Open Calculator
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h2>Toolversehub</h2>
+
+            <p>
+
+                Fast, Free & Secure Online Tools.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="../../../index.html">Home</a>
+
+        
+            </a>
+
+            <a href="../../calculators/index.html">
+
+                    Calculators
+
+            <a href="../../pdf_tools/index.html">PDF Tools</a>
+
+            </a>
+
+            <a href="../../../about.html">About</a>
+
+<a href="../../../contact.html">Contact</a>
+
+<a href="../../../privacy_policy.html">Privacy Policy</a>
+
+<a href="../../../terms_&_conditions.html">Terms & Conditions</a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Toolversehub. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

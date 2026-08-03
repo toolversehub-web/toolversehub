@@ -1,0 +1,948 @@
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#0f172a;
+
+    color:#e2e8f0;
+
+    line-height:1.7;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:#111827;
+
+    border-bottom:1px solid #334155;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+
+}
+
+.logo a{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:#38bdf8;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:#f8fafc;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#38bdf8;
+
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    background:linear-gradient(135deg,#111827,#1e293b);
+
+    padding:90px 20px;
+
+    text-align:center;
+
+    border-bottom:1px solid #334155;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.hero h1{
+
+    font-size:52px;
+
+    font-weight:800;
+
+    color:#ffffff;
+
+    margin-bottom:18px;
+
+}
+
+.hero p{
+
+    font-size:19px;
+
+    color:#cbd5e1;
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+section{
+
+    padding:70px 8%;
+
+}
+
+h2{
+
+    text-align:center;
+
+    font-size:36px;
+
+    color:#ffffff;
+
+    margin-bottom:40px;
+
+    font-weight:700;
+
+}
+
+p{
+
+    color:#cbd5e1;
+
+}
+/* =====================================================
+   CALCULATOR
+===================================================== */
+
+.calculator{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.calculator-card{
+
+    width:100%;
+
+    max-width:760px;
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+form{
+
+    width:100%;
+
+}
+
+.form-group{
+
+    margin-bottom:24px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#f8fafc;
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.form-group input,
+.form-group select{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    background:#273449;
+
+    color:#ffffff;
+
+    border:2px solid #334155;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.3s;
+
+}
+
+.form-group input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+.form-group input:focus,
+.form-group select:focus{
+
+    outline:none;
+
+    border-color:#38bdf8;
+
+    box-shadow:0 0 12px rgba(56,189,248,.30);
+
+}
+
+/* Dark calendar */
+
+input[type="date"]{
+
+    color-scheme:dark;
+
+}
+
+/* =====================================================
+   HEIGHT ROW
+===================================================== */
+
+.height-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+}
+
+/* =====================================================
+   GENDER
+===================================================== */
+
+.gender-group{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.radio-card{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px;
+
+    background:#273449;
+
+    border:2px solid #334155;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+.radio-card:hover{
+
+    border-color:#38bdf8;
+
+    transform:translateY(-2px);
+
+}
+
+.radio-card input{
+
+    width:auto;
+
+    accent-color:#38bdf8;
+
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button-group{
+
+    display:flex;
+
+    gap:16px;
+
+    margin-top:15px;
+
+}
+
+.button-group button{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.3s;
+
+}
+
+#calculateBtn{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+#calculateBtn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+#resetBtn{
+
+    background:#ef4444;
+
+    color:#ffffff;
+
+}
+
+#resetBtn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-3px);
+
+}
+/* =====================================================
+   RESULTS
+===================================================== */
+
+.results{
+
+    padding-top:20px;
+
+}
+
+.results-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.result-box{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.result-box:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#38bdf8;
+
+    box-shadow:0 20px 40px rgba(56,189,248,.18);
+
+}
+
+.result-box h3{
+
+    font-size:34px;
+
+    color:#38bdf8;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+    word-break:break-word;
+
+}
+
+.result-box p{
+
+    color:#cbd5e1;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-card{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.about-card p{
+
+    color:#cbd5e1;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+}
+
+.about-card p:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* =====================================================
+   FORMULA
+===================================================== */
+
+.formula-card{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.formula-card h3{
+
+    color:#38bdf8;
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+}
+
+.formula-card p{
+
+    color:#cbd5e1;
+
+    margin-bottom:12px;
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq{
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.faq-item{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+    transition:.3s;
+
+}
+
+.faq-item:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#38bdf8;
+
+}
+
+.faq-item h3{
+
+    color:#38bdf8;
+
+    margin-bottom:10px;
+
+    font-size:22px;
+
+}
+
+.faq-item p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+}
+/* =====================================================
+   RELATED TOOLS
+===================================================== */
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.related-card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+    transition:.35s;
+
+}
+
+.related-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#38bdf8;
+
+    box-shadow:0 20px 40px rgba(56,189,248,.18);
+
+}
+
+.related-card h3{
+
+    color:#38bdf8;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.related-card p{
+
+    color:#cbd5e1;
+
+    margin-bottom:22px;
+
+    line-height:1.7;
+
+}
+
+.related-card a{
+
+    display:inline-block;
+
+    padding:12px 25px;
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.related-card a:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#111827;
+
+    border-top:1px solid #334155;
+
+    padding:50px 20px;
+
+    margin-top:80px;
+
+}
+
+.footer-content{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.footer-content h2{
+
+    color:#38bdf8;
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    color:#cbd5e1;
+
+    margin-bottom:18px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-links a{
+
+    color:#ffffff;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#38bdf8;
+
+}
+
+.copyright{
+
+    border-top:1px solid #334155;
+
+    padding-top:20px;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+section{
+
+    padding:50px 20px;
+
+}
+
+.height-row{
+
+    grid-template-columns:1fr;
+
+}
+
+.gender-group{
+
+    grid-template-columns:1fr;
+
+}
+
+.button-group{
+
+    flex-direction:column;
+
+}
+
+.results-grid,
+.related-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-card,
+.formula-card{
+
+    padding:25px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.logo a{
+
+    font-size:26px;
+
+}
+
+nav a{
+
+    font-size:14px;
+
+}
+
+h2{
+
+    font-size:28px;
+
+}
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+.hero p{
+
+    font-size:15px;
+
+}
+
+.result-box h3{
+
+    font-size:28px;
+
+}
+
+.result-box{
+
+    padding:22px;
+
+}
+
+.related-card{
+
+    padding:24px;
+
+}
+
+}

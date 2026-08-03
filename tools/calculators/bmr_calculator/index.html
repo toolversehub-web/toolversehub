@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Free BMR Calculator by Toolversehub. Calculate your Basal Metabolic Rate, TDEE, Daily Calories, Water Intake, BMI and Healthy Weight instantly.">
+
+    <meta name="keywords"
+          content="BMR Calculator,TDEE Calculator,Calories Calculator,Water Intake Calculator,BMI Calculator">
+
+    <meta name="author"
+          content="Toolversehub">
+
+    <title>BMR Calculator - Toolversehub</title>
+
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="../../../index.html">
+
+            Toolversehub
+
+        </a>
+
+    </div>
+
+    <nav>
+
+        <a href="../../../index.html">Home</a>
+
+        <a href="../../index.html">Explore Tools</a>
+
+        <a href="../index.html">Calculators</a>
+
+        <a href="../../pdf_tools/index.html">PDF Tools</a>
+
+        <a href="../../../about.html">About</a>
+<a href="../../../contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ======================================================
+HERO
+======================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+
+            BMR Calculator
+
+        </h1>
+
+        <p>
+
+            Calculate your Basal Metabolic Rate (BMR), Total Daily Energy Expenditure (TDEE), Daily Calorie Needs, Healthy Weight Range, BMI and Recommended Water Intake using the industry-standard Mifflin-St Jeor Equation.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+CALCULATOR
+======================================================= -->
+
+<section class="calculator">
+
+<div class="calculator-card">
+
+<h2>
+
+Calculate Your BMR
+
+</h2>
+
+<form id="bmrForm">
+
+<!-- =========================
+Gender
+========================= -->
+
+<div class="form-group">
+
+<label>
+
+Gender
+
+</label>
+
+<div class="gender-group">
+
+<label class="radio-card">
+
+<input
+
+type="radio"
+
+name="gender"
+
+value="male"
+
+checked>
+
+<span>
+
+Male
+
+</span>
+
+</label>
+
+<label class="radio-card">
+
+<input
+
+type="radio"
+
+name="gender"
+
+value="female">
+
+<span>
+
+Female
+
+</span>
+
+</label>
+
+</div>
+
+</div>
+
+<!-- =========================
+Age
+========================= -->
+
+<div class="form-group">
+
+<label for="age">
+
+Age
+
+</label>
+
+<input
+
+type="number"
+
+id="age"
+
+placeholder="Enter your age"
+
+min="15"
+
+max="100"
+
+required>
+
+</div>
+
+<!-- =========================
+Height Unit
+========================= -->
+
+<div class="form-group">
+
+<label for="heightUnit">
+
+Height Unit
+
+</label>
+
+<select id="heightUnit">
+
+<option value="cm">
+
+Centimeters (cm)
+
+</option>
+
+<option value="ft">
+
+Feet & Inches
+
+</option>
+
+<option value="m">
+
+Meters (m)
+
+</option>
+
+</select>
+
+</div>
+
+<!-- Height Fields Start -->
+ <!-- =========================
+Height (CM)
+========================= -->
+
+<div class="form-group" id="cmGroup">
+
+<label for="heightCm">
+
+Height (cm)
+
+</label>
+
+<input
+
+type="number"
+
+id="heightCm"
+
+placeholder="e.g. 175"
+
+min="50"
+
+max="300">
+
+</div>
+
+<!-- =========================
+Height (Feet & Inches)
+========================= -->
+
+<div
+
+class="height-row"
+
+id="feetGroup"
+
+style="display:none;">
+
+<div class="form-group">
+
+<label for="heightFeet">
+
+Feet
+
+</label>
+
+<input
+
+type="number"
+
+id="heightFeet"
+
+placeholder="5"
+
+min="1"
+
+max="8">
+
+</div>
+
+<div class="form-group">
+
+<label for="heightInches">
+
+Inches
+
+</label>
+
+<input
+
+type="number"
+
+id="heightInches"
+
+placeholder="10"
+
+min="0"
+
+max="11">
+
+</div>
+
+</div>
+
+<!-- =========================
+Height (Meters)
+========================= -->
+
+<div
+
+class="form-group"
+
+id="meterGroup"
+
+style="display:none;">
+
+<label for="heightMeter">
+
+Height (m)
+
+</label>
+
+<input
+
+type="number"
+
+id="heightMeter"
+
+placeholder="1.75"
+
+step="0.01"
+
+min="0.50"
+
+max="3">
+
+</div>
+
+<!-- =========================
+Weight Unit
+========================= -->
+
+<div class="form-group">
+
+<label for="weightUnit">
+
+Weight Unit
+
+</label>
+
+<select id="weightUnit">
+
+<option value="kg">
+
+Kilograms (kg)
+
+</option>
+
+<option value="lb">
+
+Pounds (lb)
+
+</option>
+
+<option value="st">
+
+Stone (st)
+
+</option>
+
+</select>
+
+</div>
+
+<!-- =========================
+Weight
+========================= -->
+
+<div class="form-group">
+
+<label for="weight">
+
+Weight
+
+</label>
+
+<input
+
+type="number"
+
+id="weight"
+
+placeholder="Enter your weight"
+
+step="0.1"
+
+min="20"
+
+max="500"
+
+required>
+
+</div>
+
+<!-- =========================
+Activity Level
+========================= -->
+
+<div class="form-group">
+
+<label for="activity">
+
+Activity Level
+
+</label>
+
+<select id="activity">
+
+<option value="1.2">
+
+Sedentary (Little or no exercise)
+
+</option>
+
+<option value="1.375">
+
+Light Exercise (1–3 days/week)
+
+</option>
+
+<option value="1.55" selected>
+
+Moderate Exercise (3–5 days/week)
+
+</option>
+
+<option value="1.725">
+
+Very Active (6–7 days/week)
+
+</option>
+
+<option value="1.9">
+
+Athlete / Extra Active
+
+</option>
+
+</select>
+
+</div>
+
+<!-- =========================
+Buttons
+========================= -->
+
+<div class="button-group">
+
+<button
+
+type="button"
+
+id="calculateBtn">
+
+Calculate BMR
+
+</button>
+
+<button
+
+type="reset"
+
+id="resetBtn">
+
+Reset
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+RESULTS
+====================================================== -->
+
+<section class="results">
+
+<h2>
+
+Your Results
+
+</h2>
+
+<div class="results-grid">
+
+<!-- =========================
+Result Card 1
+========================= -->
+
+<div class="result-box">
+
+<h3 id="bmrResult">
+
+--
+
+</h3>
+
+<p>
+
+Basal Metabolic Rate (kcal/day)
+
+</p>
+
+</div>
+
+<!-- =========================
+Result Card 2
+========================= -->
+
+<div class="result-box">
+
+<h3 id="tdeeResult">
+
+--
+
+</h3>
+
+<p>
+
+Maintenance Calories (TDEE)
+
+</p>
+
+</div>
+
+<!-- =========================
+Result Card 3
+========================= -->
+
+<div class="result-box">
+
+<h3 id="bmiResult">
+
+--
+
+</h3>
+
+<p>
+
+Body Mass Index (BMI)
+
+</p>
+
+</div>
+
+<!-- Results continue in Part 3 -->
+ <!-- =========================
+Result Card 4
+========================= -->
+
+<div class="result-box">
+
+<h3 id="bmiStatus">
+
+--
+
+</h3>
+
+<p>
+
+BMI Category
+
+</p>
+
+</div>
+
+<!-- =========================
+Result Card 5
+========================= -->
+
+<div class="result-box">
+
+<h3 id="healthyWeight">
+
+--
+
+</h3>
+
+<p>
+
+Healthy Weight Range
+
+</p>
+
+</div>
+
+<!-- =========================
+Result Card 6
+========================= -->
+
+<div class="result-box">
+
+<h3 id="waterResult">
+
+--
+
+</h3>
+
+<p>
+
+Daily Water Intake
+
+</p>
+
+</div>
+
+<!-- =========================
+Result Card 7
+========================= -->
+
+<div class="result-box">
+
+<h3 id="lossCalories">
+
+--
+
+</h3>
+
+<p>
+
+Weight Loss Calories
+
+</p>
+
+</div>
+
+<!-- =========================
+Result Card 8
+========================= -->
+
+<div class="result-box">
+
+<h3 id="gainCalories">
+
+--
+
+</h3>
+
+<p>
+
+Weight Gain Calories
+
+</p>
+
+</div>
+
+<!-- =========================
+Result Card 9
+========================= -->
+
+<div class="result-box">
+
+<h3 id="proteinResult">
+
+--
+
+</h3>
+
+<p>
+
+Recommended Protein Intake
+
+</p>
+
+</div>
+
+<!-- =========================
+Result Card 10
+========================= -->
+
+<div class="result-box">
+
+<h3 id="fatResult">
+
+--
+
+</h3>
+
+<p>
+
+Recommended Fat Intake
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+ABOUT BMR
+====================================================== -->
+
+<section class="about">
+
+<h2>
+
+About BMR Calculator
+
+</h2>
+
+<div class="about-card">
+
+<p>
+
+Basal Metabolic Rate (BMR) is the number of calories your body needs every day to perform essential life-sustaining functions such as breathing, blood circulation, maintaining body temperature, and supporting organ function while at complete rest.
+
+</p>
+
+<p>
+
+This Toolversehub BMR Calculator uses the scientifically recognized Mifflin-St Jeor Equation, which is considered one of the most accurate formulas for estimating daily calorie requirements for healthy adults.
+
+</p>
+
+<p>
+
+After calculating your BMR, the calculator estimates your Total Daily Energy Expenditure (TDEE), recommended calorie intake for weight loss or weight gain, Body Mass Index (BMI), healthy weight range, recommended daily water intake, and daily protein and fat requirements.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+FORMULA
+====================================================== -->
+
+<section class="formula">
+
+<h2>
+
+Formula Used
+
+</h2>
+
+<div class="formula-card">
+
+<h3>
+
+Male
+
+</h3>
+
+<p>
+
+BMR = (10 × Weight in kg) + (6.25 × Height in cm) − (5 × Age) + 5
+
+</p>
+
+<br>
+
+<h3>
+
+Female
+
+</h3>
+
+<p>
+
+BMR = (10 × Weight in kg) + (6.25 × Height in cm) − (5 × Age) − 161
+
+</p>
+
+<br>
+
+<h3>
+
+Activity Multipliers
+
+</h3>
+
+<p>
+
+Sedentary = 1.20
+
+</p>
+
+<p>
+
+Light Exercise = 1.375
+
+</p>
+
+<p>
+
+Moderate Exercise = 1.55
+
+</p>
+
+<p>
+
+Very Active = 1.725
+
+</p>
+
+<p>
+
+Athlete = 1.90
+
+</p>
+
+</div>
+
+</section>
+<!-- =====================================================
+FAQ
+====================================================== -->
+
+<section class="faq">
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+<div class="faq-item">
+
+<h3>
+
+What is BMR?
+
+</h3>
+
+<p>
+
+Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest to keep your organs functioning.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Is this calculator accurate?
+
+</h3>
+
+<p>
+
+Yes. Toolversehub uses the Mifflin-St Jeor Equation, one of the most accurate and widely recommended formulas for estimating BMR.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+What is TDEE?
+
+</h3>
+
+<p>
+
+Total Daily Energy Expenditure (TDEE) estimates how many calories you burn in an entire day based on your activity level.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Can I use this calculator for weight loss?
+
+</h3>
+
+<p>
+
+Yes. The calculator estimates calorie targets for both weight loss and weight gain based on your maintenance calories.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+RELATED TOOLS
+====================================================== -->
+
+<section class="related-tools">
+
+<h2>
+
+Related Calculators
+
+</h2>
+
+<div class="related-grid">
+
+<div class="related-card">
+
+<h3>
+
+BMI Calculator
+
+</h3>
+
+<p>
+
+Calculate your Body Mass Index and check your weight category.
+
+</p>
+
+<a href="../bmi_calculator/index.html">
+
+Open Calculator
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+Age Calculator
+
+</h3>
+
+<p>
+
+Find your exact age in years, months, days, total weeks and more.
+
+</p>
+
+<a href="../age_calculator/index.html">
+
+Open Calculator
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+Gpa Calculator
+
+</h3>
+
+<p>
+
+Calculate Your Grade Point Average quickly and accurately .
+
+</p>
+
+<a href="../Gpa_calculator/index.html">
+
+Open Calculator
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h2>Toolversehub</h2>
+
+            <p>
+
+                Fast, Free & Secure Online Tools.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="../../../index.html">Home</a>
+
+        
+            </a>
+
+            <a href="../../calculators/index.html">
+
+                    Calculators
+
+            <a href="../../pdf_tools/index.html">PDF Tools</a>
+
+            </a>
+
+           <a href="../../../about.html">About</a>
+
+<a href="../../../contact.html">Contact</a>
+
+<a href="../../../privacy_policy.html">Privacy Policy</a>
+
+<a href="../../../terms_&_conditions.html">Terms & Conditions</a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Toolversehub. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

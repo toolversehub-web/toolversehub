@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Extract specific pages from a PDF online for free with ToolVerseHub. Extract single pages, page ranges, or custom page selections instantly.">
+
+<title>Extract PDF Pages | ToolVerseHub</title>
+
+<link rel="icon" type="image/png" href="../../../favicon.png">
+
+<link rel="stylesheet"
+href="style.css">
+
+<!-- PDF-LIB -->
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ==========================
+     HEADER
+========================== -->
+
+<header>
+
+<div class="container">
+
+<a href="../../../index.html"
+class="logo">
+
+Toolversehub
+
+</a>
+
+<nav>
+
+<a href="../../../index.html">
+
+Home
+
+<a href="../index.html">
+
+                    PDF Tools
+
+                </a>
+
+<a href="../../calculators/index.html">
+
+                    Calculators
+
+                </a>
+
+<a href="../../../about.html">About</a>
+<a href="../../../contact.html">Contact</a>
+
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="hero">
+
+<h1>
+
+📄 Extract PDF Pages
+
+</h1>
+
+<p>
+
+Extract one page, multiple pages, or page ranges from your PDF in seconds without affecting the original file.
+
+</p>
+
+</section>
+<!-- ==========================================
+     UPLOAD SECTION
+========================================== -->
+
+<section class="upload-section">
+
+<div class="upload-card">
+
+<h2>
+
+Upload PDF
+
+</h2>
+
+<div
+class="drop-area"
+id="dropArea">
+
+<div class="upload-icon">
+
+📄
+
+</div>
+
+<h3>
+
+Drag & Drop PDF Here
+
+</h3>
+
+<p>
+
+or
+
+</p>
+
+<label
+for="pdfInput"
+class="browse-btn">
+
+Browse PDF
+
+</label>
+
+<input
+type="file"
+id="pdfInput"
+accept=".pdf,application/pdf"
+hidden>
+
+<span class="supported-text">
+
+Supports PDF files only
+
+</span>
+
+</div>
+
+<div
+class="pdf-info"
+id="pdfInfo">
+
+<p>
+
+Selected File:
+
+<strong id="fileName">
+
+None
+
+</strong>
+
+</p>
+
+<p>
+
+Total Pages:
+
+<strong id="pageCount">
+
+0
+
+</strong>
+
+</p>
+
+<p>
+
+File Size:
+
+<strong id="fileSize">
+
+0 MB
+
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     EXTRACT SETTINGS
+========================================== -->
+
+<section class="settings-section">
+
+<div class="settings-card">
+
+<h2>
+
+Extract Pages
+
+</h2>
+
+<div class="setting-group">
+
+<label for="pageInput">
+
+Pages to Extract
+
+</label>
+
+<input
+type="text"
+id="pageInput"
+placeholder="Example: 1,3,5-8,12">
+
+<small class="input-help">
+
+Examples:
+<strong>5</strong>,
+<strong>1,3,7</strong>,
+<strong>5-10</strong>,
+<strong>1,3,5-8,12</strong>
+
+</small>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     EXTRA OPTIONS
+========================================== -->
+
+<section class="options-section">
+
+<div class="options-card">
+
+<h2>
+
+Extraction Options
+
+</h2>
+
+<div class="setting-group">
+
+<label>
+
+<input
+type="checkbox"
+id="sortPages"
+checked>
+
+Automatically Sort Pages
+
+</label>
+
+</div>
+
+<div class="setting-group">
+
+<label>
+
+<input
+type="checkbox"
+id="removeDuplicates"
+checked>
+
+Remove Duplicate Pages
+
+</label>
+
+</div>
+
+<div class="setting-group">
+
+<label>
+
+<input
+type="checkbox"
+id="ignoreInvalid"
+checked>
+
+Ignore Invalid Page Numbers
+
+</label>
+
+</div>
+
+<div class="setting-group">
+
+<label>
+
+<input
+type="checkbox"
+id="reverseRange"
+checked>
+
+Automatically Fix Reverse Ranges (10-5 → 5-10)
+
+</label>
+
+</div>
+
+<div class="info-box">
+
+<h3>
+
+💡 Tips
+
+</h3>
+
+<ul>
+
+<li>
+
+You can extract a single page.
+
+</li>
+
+<li>
+
+You can extract multiple pages.
+
+</li>
+
+<li>
+
+You can extract page ranges.
+
+</li>
+
+<li>
+
+Mixed page selection is fully supported.
+
+</li>
+
+<li>
+
+Original PDF will never be modified.
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     ACTION SECTION
+========================================== -->
+
+<section class="action-section">
+
+<div class="action-card">
+
+<button id="extractBtn">
+
+📄 Extract Pages
+
+</button>
+
+<button id="resetBtn">
+
+🔄 Reset
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     RELATED TOOLS
+========================================== -->
+
+<section class="related-tools">
+
+<h2>
+
+Related PDF Tools
+
+</h2>
+
+<div class="related-grid">
+
+<div class="related-card">
+
+<h3>
+
+📑 Split PDF
+
+</h3>
+
+<p>
+
+Split large PDF files into smaller documents.
+
+</p>
+
+<a href="../split_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+📎 Merge PDF
+
+</h3>
+
+<p>
+
+Combine multiple PDF files into one document.
+
+</p>
+
+<a href="../merge_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+🔢 Add Page Numbers
+
+</h3>
+
+<p>
+
+Insert page numbers into every page of your PDF.
+
+</p>
+
+<a href="../add_page_numbers/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h2>Toolversehub</h2>
+
+            <p>
+
+                Fast, Free & Secure Online Tools.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="../../../index.html">Home</a>
+
+        
+            </a>
+
+            <a href="../../calculators/index.html">
+
+                    Calculators
+
+            <a href="../../pdf_tools/index.html">PDF Tools</a>
+
+            </a>
+
+            <a href="../../../about.html">About</a>
+
+<a href="../../../contact.html">Contact</a>
+
+<a href="../../../privacy_policy.html">Privacy Policy</a>
+
+<a href="../../../terms_&_conditions.html">Terms & Conditions</a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Toolversehub. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Add page numbers to PDF online for free with ToolVerseHub. Customize position, font size, color and starting number instantly.">
+
+<title>Add Page Numbers to PDF | ToolVerseHub</title>
+
+<link rel="icon" type="image/png" href="../../../favicon.png">
+
+<link rel="stylesheet"
+href="style.css">
+
+<!-- PDF-LIB -->
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ==========================
+     HEADER
+========================== -->
+
+<header>
+
+<div class="container">
+
+<a href="../../../index.html"
+class="logo">
+
+Toolversehub
+
+</a>
+
+<nav>
+
+<a href="../../../index.html">
+
+Home
+
+<a href="../index.html">
+
+                    PDF Tools
+
+                </a>
+
+<a href="../../calculators/index.html">
+
+                    Calculators
+
+                </a>
+
+<a href="../../../about.html">About</a>
+<a href="../../../contact.html">Contact</a>
+
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="hero">
+
+<h1>
+
+🔢 Add Page Numbers to PDF
+
+</h1>
+
+<p>
+
+Insert professional page numbers into every PDF page in seconds.
+
+</p>
+
+</section>
+<!-- ==========================================
+     UPLOAD SECTION
+========================================== -->
+
+<section class="upload-section">
+
+<div class="upload-card">
+
+<h2>
+
+Upload PDF
+
+</h2>
+
+<div
+class="drop-area"
+id="dropArea">
+
+<div class="upload-icon">
+
+📄
+
+</div>
+
+<h3>
+
+Drag & Drop PDF Here
+
+</h3>
+
+<p>
+
+or
+
+</p>
+
+<label
+for="pdfInput"
+class="browse-btn">
+
+Browse PDF
+
+</label>
+
+<input
+type="file"
+id="pdfInput"
+accept=".pdf,application/pdf"
+hidden>
+
+<span class="supported-text">
+
+Supports PDF files only
+
+</span>
+
+</div>
+
+<div
+class="pdf-info"
+id="pdfInfo">
+
+<p>
+
+Selected File:
+
+<strong id="fileName">
+
+None
+
+</strong>
+
+</p>
+
+<p>
+
+Total Pages:
+
+<strong id="pageCount">
+
+0
+
+</strong>
+
+</p>
+
+<p>
+
+File Size:
+
+<strong id="fileSize">
+
+0 MB
+
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     PAGE NUMBER SETTINGS
+========================================== -->
+
+<section class="settings-section">
+
+<div class="settings-card">
+
+<h2>
+
+Page Number Settings
+
+</h2>
+
+<div class="setting-group">
+
+<label for="startNumber">
+
+Starting Number
+
+</label>
+
+<input
+type="number"
+id="startNumber"
+value="1"
+min="1">
+
+</div>
+
+<div class="setting-group">
+
+<label for="position">
+
+Page Number Position
+
+</label>
+
+<select id="position">
+
+<option value="bottomCenter" selected>
+
+Bottom Center
+
+</option>
+
+<option value="bottomLeft">
+
+Bottom Left
+
+</option>
+
+<option value="bottomRight">
+
+Bottom Right
+
+</option>
+
+<option value="topCenter">
+
+Top Center
+
+</option>
+
+<option value="topLeft">
+
+Top Left
+
+</option>
+
+<option value="topRight">
+
+Top Right
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     APPEARANCE SETTINGS
+========================================== -->
+
+<section class="appearance-section">
+
+<div class="appearance-card">
+
+<h2>
+
+Appearance
+
+</h2>
+
+<div class="setting-group">
+
+<label for="fontSize">
+
+Font Size
+
+</label>
+
+<input
+type="range"
+id="fontSize"
+min="10"
+max="40"
+value="16">
+
+<span id="fontSizeValue">
+
+16 px
+
+</span>
+
+</div>
+
+<div class="setting-group">
+
+<label for="fontColor">
+
+Font Color
+
+</label>
+
+<input
+type="color"
+id="fontColor"
+value="#000000">
+
+</div>
+
+<div class="setting-group">
+
+<label for="margin">
+
+Page Margin
+
+</label>
+
+<input
+type="range"
+id="margin"
+min="10"
+max="80"
+value="25">
+
+<span id="marginValue">
+
+25 px
+
+</span>
+
+</div>
+
+<div class="setting-group">
+
+<label for="fontStyle">
+
+Font Style
+
+</label>
+
+<select id="fontStyle">
+
+<option value="Helvetica" selected>
+
+Helvetica
+
+</option>
+
+<option value="Helvetica-Bold">
+
+Helvetica Bold
+
+</option>
+
+<option value="Courier">
+
+Courier
+
+</option>
+
+<option value="TimesRoman">
+
+Times Roman
+
+</option>
+
+</select>
+
+</div>
+
+<div class="setting-group">
+
+<label for="numberFormat">
+
+Number Format
+
+</label>
+
+<select id="numberFormat">
+
+<option value="number" selected>
+
+1
+
+</option>
+
+<option value="page">
+
+Page 1
+
+</option>
+
+<option value="dash">
+
+- 1 -
+
+</option>
+
+<option value="total">
+
+1 / Total Pages
+
+</option>
+
+<option value="pageOf">
+
+Page 1 of 20
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     ACTION SECTION
+========================================== -->
+
+<section class="action-section">
+
+<div class="action-card">
+
+<button id="addNumbersBtn">
+
+🔢 Add Page Numbers
+
+</button>
+
+<button id="resetBtn">
+
+🔄 Reset
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     RELATED PDF TOOLS
+========================================== -->
+
+<section class="related-tools">
+
+<h2>
+
+Related PDF Tools
+
+</h2>
+
+<div class="related-grid">
+
+<div class="related-card">
+
+<h3>
+
+💧 Watermark PDF
+
+</h3>
+
+<p>
+
+Add custom text watermarks to every PDF page instantly.
+
+</p>
+
+<a href="../watermark_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+🔄 Rotate PDF
+
+</h3>
+
+<p>
+
+Rotate PDF pages to the correct orientation in seconds.
+
+</p>
+
+<a href="../rotate_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+<div class="related-card">
+
+<h3>
+
+🔒 Protect PDF
+
+</h3>
+
+<p>
+
+Secure your PDF with a strong password for better protection.
+
+</p>
+
+<a href="../protect_pdf/index.html">
+
+Open Tool
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+
+            <h2>Toolversehub</h2>
+
+            <p>
+
+                Fast, Free & Secure Online Tools.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="../../../index.html">Home</a>
+
+        
+            </a>
+
+            <a href="../../calculators/index.html">
+
+                    Calculators
+
+            <a href="../../pdf_tools/index.html">PDF Tools</a>
+
+            </a>
+
+            <a href="../../../about.html">About</a>
+
+<a href="../../../contact.html">Contact</a>
+
+<a href="../../../privacy_policy.html">Privacy Policy</a>
+
+<a href="../../../terms_&_conditions.html">Terms & Conditions</a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Toolversehub. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Percentage Calculator | ToolVerseHub
+    </title>
+
+    <link rel="icon" type="image/png" href="../../../favicon.png">
+
+    <meta name="description"
+        content="Calculate percentages, discounts, percentage increase, decrease and much more instantly with ToolVerseHub Percentage Calculator.">
+
+    <link rel="stylesheet"
+        href="style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ===================================================
+                        HEADER
+==================================================== -->
+
+<header>
+
+    <div class="container header">
+
+        <a href="../../../index.html"
+            class="logo">
+
+            ToolVerse<span>Hub</span>
+
+        </a>
+
+        <nav>
+
+            <ul>
+
+                <li>
+
+                    <a href="../../../index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../pdf_tools/index.html">
+
+                        PDF Tools
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../index.html"
+                        class="active">
+
+                        Calculators
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../../../contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- ===================================================
+                    HERO SECTION
+==================================================== -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <span class="hero-tag">
+
+            Fast • Accurate • Free
+
+        </span>
+
+        <h1>
+
+            Percentage Calculator
+
+        </h1>
+
+        <p>
+
+            Perform percentage calculations instantly,
+            including discounts, percentage increase,
+            decrease, and value comparisons with
+            accurate real-time results.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+                CALCULATOR START
+==================================================== -->
+
+<section class="calculator-section">
+
+<div class="container">
+
+<div class="calculator-card">
+    <!-- ===================================================
+                CALCULATOR
+==================================================== -->
+
+<div class="calculator-header">
+
+    <h2>
+
+        Calculate Instantly
+
+    </h2>
+
+    <p>
+
+        Choose a calculation type and enter your values.
+
+    </p>
+
+</div>
+
+<div class="calculator-tabs">
+
+    <button class="tab-btn active"
+        data-tab="percent">
+
+        % of Number
+
+    </button>
+
+    <button class="tab-btn"
+        data-tab="whatpercent">
+
+        What %
+
+    </button>
+
+    <button class="tab-btn"
+        data-tab="increase">
+
+        Increase
+
+    </button>
+
+    <button class="tab-btn"
+        data-tab="decrease">
+
+        Decrease
+
+    </button>
+
+    <button class="tab-btn"
+        data-tab="discount">
+
+        Discount
+
+    </button>
+
+</div>
+
+<!-- =======================
+        TAB 1
+======================= -->
+
+<div class="tab-content active"
+    id="percent">
+
+    <div class="input-box">
+
+        <label>
+
+            Percentage (%)
+
+        </label>
+
+        <input
+            type="number"
+            id="percentValue"
+            placeholder="Example: 25">
+
+    </div>
+
+    <div class="input-box">
+
+        <label>
+
+            Number
+
+        </label>
+
+        <input
+            type="number"
+            id="percentNumber"
+            placeholder="Example: 500">
+
+    </div>
+
+    <button
+        id="calculatePercent"
+        class="calculate-btn">
+
+        Calculate
+
+    </button>
+
+</div>
+
+<!-- =======================
+        TAB 2
+======================= -->
+
+<div class="tab-content"
+    id="whatpercent">
+
+    <div class="input-box">
+
+        <label>
+
+            Value
+
+        </label>
+
+        <input
+            type="number"
+            id="valueOne"
+            placeholder="Example: 50">
+
+    </div>
+
+    <div class="input-box">
+
+        <label>
+
+            Total
+
+        </label>
+
+        <input
+            type="number"
+            id="valueTwo"
+            placeholder="Example: 200">
+
+    </div>
+
+    <button
+        id="calculateWhatPercent"
+        class="calculate-btn">
+
+        Calculate
+
+    </button>
+
+</div>
+
+<!-- =======================
+        TAB 3
+======================= -->
+
+<div class="tab-content"
+    id="increase">
+
+    <div class="input-box">
+
+        <label>
+
+            Original Value
+
+        </label>
+
+        <input
+            type="number"
+            id="increaseOld">
+
+    </div>
+
+    <div class="input-box">
+
+        <label>
+
+            New Value
+
+        </label>
+
+        <input
+            type="number"
+            id="increaseNew">
+
+    </div>
+
+    <button
+        id="calculateIncrease"
+        class="calculate-btn">
+
+        Calculate
+
+    </button>
+
+</div>
+
+<!-- =======================
+        TAB 4
+======================= -->
+
+<div class="tab-content"
+    id="decrease">
+
+    <div class="input-box">
+
+        <label>
+
+            Original Value
+
+        </label>
+
+        <input
+            type="number"
+            id="decreaseOld">
+
+    </div>
+
+    <div class="input-box">
+
+        <label>
+
+            New Value
+
+        </label>
+
+        <input
+            type="number"
+            id="decreaseNew">
+
+    </div>
+
+    <button
+        id="calculateDecrease"
+        class="calculate-btn">
+
+        Calculate
+
+    </button>
+
+</div>
+
+<!-- =======================
+        TAB 5
+======================= -->
+
+<div class="tab-content"
+    id="discount">
+
+    <div class="input-box">
+
+        <label>
+
+            Original Price
+
+        </label>
+
+        <input
+            type="number"
+            id="discountPrice">
+
+    </div>
+
+    <div class="input-box">
+
+        <label>
+
+            Discount (%)
+
+        </label>
+
+        <input
+            type="number"
+            id="discountPercent">
+
+    </div>
+
+    <button
+        id="calculateDiscount"
+        class="calculate-btn">
+
+        Calculate
+
+    </button>
+
+</div>
+<!-- ===================================================
+                    RESULT CARD
+==================================================== -->
+
+<div class="result-card">
+
+    <div class="result-top">
+
+        <h3>
+
+            Result
+
+        </h3>
+
+        <span class="result-badge">
+
+            Live
+
+        </span>
+
+    </div>
+
+    <div
+        id="resultValue"
+        class="result-value">
+
+        0
+
+    </div>
+
+    <div class="formula-card">
+
+        <h4>
+
+            Formula Used
+
+        </h4>
+
+        <p id="formulaText">
+
+            Your calculation formula will appear here.
+
+        </p>
+
+    </div>
+
+    <div class="result-actions">
+
+        <button
+            id="copyResult"
+            class="copy-btn">
+
+            Copy Result
+
+        </button>
+
+        <button
+            id="resetCalculator"
+            class="reset-btn">
+
+            Reset
+
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================================
+                HOW TO USE
+==================================================== -->
+
+<section class="how-use">
+
+<div class="container">
+
+<h2>
+
+    How To Use
+
+</h2>
+
+<p class="section-text">
+
+    Follow these simple steps to calculate percentages quickly and accurately.
+
+</p>
+
+<div class="how-grid">
+
+<div class="how-card">
+
+<div class="step-number">
+
+    1
+
+</div>
+
+<h3>
+
+    Select Calculation
+
+</h3>
+
+<p>
+
+    Choose the percentage calculation you want to perform.
+
+</p>
+
+</div>
+
+<div class="how-card">
+
+<div class="step-number">
+
+    2
+
+</div>
+
+<h3>
+
+    Enter Values
+
+</h3>
+
+<p>
+
+    Enter the required values into the calculator fields.
+
+</p>
+
+</div>
+
+<div class="how-card">
+
+<div class="step-number">
+
+    3
+
+</div>
+
+<h3>
+
+    Get Result
+
+</h3>
+
+<p>
+
+    Click Calculate to instantly see your accurate result.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===================================================
+                    FEATURES
+==================================================== -->
+
+<section class="features">
+
+    <div class="container">
+
+        <h2>
+
+            Why Use Our Percentage Calculator?
+
+        </h2>
+
+        <p class="section-text">
+
+            Fast, accurate and designed for students, professionals and everyday calculations.
+
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <h3>⚡ Instant Results</h3>
+
+                <p>Get accurate percentage calculations in real time.</p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>🎯 Accurate</h3>
+
+                <p>Uses standard mathematical percentage formulas.</p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>📱 Responsive</h3>
+
+                <p>Works perfectly on desktop, tablet and mobile devices.</p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>🔒 Free to Use</h3>
+
+                <p>No registration or installation required.</p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>📋 Copy Result</h3>
+
+                <p>Copy your answer with a single click.</p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>🚀 Fast Performance</h3>
+
+                <p>Lightweight calculator with instant calculations.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+                        FAQ
+==================================================== -->
+
+<section class="faq">
+
+    <div class="container">
+
+        <h2>
+
+            Frequently Asked Questions
+
+        </h2>
+
+        <div class="faq-item">
+
+            <h3>
+
+                Is this calculator free?
+
+            </h3>
+
+            <p>
+
+                Yes. ToolVerseHub Percentage Calculator is completely free.
+
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>
+
+                Does it work on mobile?
+
+            </h3>
+
+            <p>
+
+                Yes. It is fully responsive and works on all modern devices.
+
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>
+
+                Can I calculate discounts?
+
+            </h3>
+
+            <p>
+
+                Yes. Use the Discount tab to calculate savings and final price.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+                RELATED CALCULATORS
+==================================================== -->
+
+<section class="related-tools">
+
+    <div class="container">
+
+        <h2>
+
+            Related Calculators
+
+        </h2>
+
+        <div class="related-grid">
+
+            <div class="related-card">
+
+                <h3>
+
+                    Discount Calculator
+
+                </h3>
+
+                <p>
+
+                    Calculate discounts and final prices instantly.
+
+                </p>
+
+                <a href="../discount_calculator/index.html">
+
+                    Open Calculator
+
+                </a>
+
+            </div>
+
+            <div class="related-card">
+
+                <h3>
+
+                    BMI Calculator
+
+                </h3>
+
+                <p>
+
+                    Calculate your Body Mass Index easily.
+
+                </p>
+
+                <a href="../bmi_calculator/index.html">
+
+                    Open Calculator
+
+                </a>
+
+            </div>
+
+            <div class="related-card">
+
+                <h3>
+
+                    Age Calculator
+
+                </h3>
+
+                <p>
+
+                    Find your exact age in seconds.
+
+                </p>
+
+                <a href="../age_calculator/index.html">
+
+                    Open Calculator
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+                    FOOTER
+==================================================== -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div class="footer-about">
+
+            <h3>
+
+                ToolVerseHub
+
+            </h3>
+
+            <p>
+
+                Free online PDF tools and calculators designed to make everyday tasks faster, easier and more accurate.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>
+
+                Quick Links
+
+            </h4>
+
+            <ul>
+
+                <li><a href="../../../index.html">Home</a></li>
+
+                <li><a href="../../../about.html">About</a></li>
+
+                </li><a href="../index.html">Calculators</a></li>
+
+                </li><a href="../../pdf_tools/index.html">PDF Tools</a></li>
+
+                <li><a href="../../../contact.html">Contact</a></li>
+
+                <li><a href="../../../privacy_policy.html">Privacy Policy</a></li>
+
+                <li><a href="../../../terms_&_conditions.html">Terms & Conditions</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>
+
+                Calculators
+
+            </h4>
+
+            <ul>
+
+                <li><a href="#">Percentage Calculator</a></li>
+
+                <li><a href="../bmi_calculator/index.html">BMI Calculator</a></li>
+
+                <li><a href="../age_calculator/index.html">Age Calculator</a></li>
+
+                <li><a href="../discount_calculator/index.html">Discount Calculator</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 ToolVerseHub. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
