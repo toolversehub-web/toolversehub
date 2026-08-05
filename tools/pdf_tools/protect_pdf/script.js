@@ -498,8 +498,7 @@ protectBtn.addEventListener("click", async () => {
         formData.append("password", password);
 
         const response = await fetch(
-            "http://localhost:3000/protect",
-            {
+    "https://toolversehub-production-ba65.up.railway.app/protect",
                 method: "POST",
                 body: formData
             }
