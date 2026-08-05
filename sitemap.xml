@@ -3,9 +3,64 @@
 
   <url>
     <loc>https://toolversehub-web.netlify.app/</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://toolversehub-web.netlify.app/tools/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://toolversehub-web.netlify.app/tools/calculators/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/age_calculator/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/bmi_calculator/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/bmr_calculator/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/gpa_calculator/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/discount_calculator/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/loan_emi_calculator/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/percentage_calculator/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/unit_converter/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/currency_converter/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/date_calculator/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/calculators/compound_interest_calculator/</loc></url>
+
+  <url>
+    <loc>https://toolversehub-web.netlify.app/tools/pdf_tools/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url><loc>https://toolversehub-web.netlify.app/tools/pdf_tools/merge_pdf/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/pdf_tools/split_pdf/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/pdf_tools/watermark_pdf/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/pdf_tools/image_to_pdf/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/pdf_tools/pdf_to_jpg/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/pdf_tools/rotate_pdf/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/pdf_tools/extract_pdf_pages/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/pdf_tools/remove_pdf_pages/</loc></url>
+  <url><loc>https://toolversehub-web.netlify.app/tools/pdf_tools/add_pdf_page_number/</loc></url>
+
+  <url>
+    <loc>https://toolversehub-web.netlify.app/about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolversehub-web.netlify.app/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolversehub-web.netlify.app/privacy_policy</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolversehub-web.netlify.app/terms_&_conditions</loc>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
