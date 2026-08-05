@@ -56,11 +56,11 @@
   <url>
     <loc>https://toolversehub-web.netlify.app/privacy_policy</loc>
     <priority>0.7</priority>
-  </url>
+</url>
 
-  <url>
-    <loc>https://toolversehub-web.netlify.app/terms_&_conditions</loc>
+<url>
+    <loc>https://toolversehub-web.netlify.app/terms_&amp;_conditions</loc>
     <priority>0.7</priority>
-  </url>
+</url>
 
 </urlset>
