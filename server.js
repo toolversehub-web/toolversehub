@@ -7,8 +7,6 @@ const { execFile } = require("child_process");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "..")));
-
 app.use(cors());
 app.use(express.json());
 
@@ -64,9 +62,10 @@ const upload = multer({
 
 app.get("/", (req, res) => {
 
-    res.sendFile(
-        path.join(__dirname, "..", "index.html")
-    );
+    res.json({
+        success: true,
+        message: "ToolVerseHub Backend is Running 🚀"
+    });
 
 });
 /* ======================================================
