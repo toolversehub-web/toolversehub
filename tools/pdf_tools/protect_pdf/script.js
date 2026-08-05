@@ -497,8 +497,9 @@ protectBtn.addEventListener("click", async () => {
         formData.append("pdf", pdfFile);
         formData.append("password", password);
 
-        const response = await fetch(
+       const response = await fetch(
     "https://toolversehub-production-ba65.up.railway.app/protect",
+            {
                 method: "POST",
                 body: formData
             }
